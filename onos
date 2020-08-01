@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case "$1" in
+	"log")	docker logs compose_onos_1 &> onos$2.log
+	;;
+	"flog")	docker logs -f compose_onos_1
+	;;
+	"exec")	docker exec -it compose_onos_1 sh
+	;;
+	*) echo "Invalid option for component compose_onos_1, log/flog/exec"
+	;;
+esac

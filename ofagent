@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+case "$1" in
+	"log")	docker logs compose_ofagent_1 &> ofagent$2.log
+	;;
+	"flog")	docker logs -f compose_ofagent_1
+	;;
+	"exec")	docker exec -it compose_ofagent_1 sh
+	;;
+	*) echo "Invalid option for component compose_ofagent_1, log/flog/exec"
+	;;
+esac

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+<<Usage
+	./parent <any name appended to each of the logs>
+Usage
+ 
+components=(voltha onos openolt openonu ofagent bbsim consul etcd)
+for component in "${components[@]}" 
+do 
+	echo $component
+	./$component log $1
+done 

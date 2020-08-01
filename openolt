@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case "$1" in
+	"log")	docker logs compose_adapter_openolt_1 &> openolt$2.log
+	;;
+	"flog")	docker logs -f compose_adapter_openolt_1
+	;;
+	"exec")	docker exec -it compose_adapter_openolt_1 sh
+	;;
+	*) echo "Invalid option for component compose_adapter_openolt_1, log/flog/exec"
+	;;
+esac
