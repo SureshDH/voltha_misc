@@ -145,7 +145,7 @@ alias rg='/home/sterlite/rg.sh'
 alias bng='/home/sterlite/bng.sh'
 alias polt='/home/sterlite/polt.sh'
 alias voltha=\"docker-compose -f /home/sterlite/source/voltha-go/compose/system-test.yml $1\"
-alias dsm=\"docker-compose -f /home/sterlite/source/1.13.1/docker-compose-dsm.yml $1\""
+alias dsm=\"docker-compose -f /home/sterlite/source/1.13.1/docker-compose-dsm.yml $1\"" >> ~/.bashrc
 
 echo "export DOCKER_HOST_IP=172.17.0.1
 export GO111MODULE=on
