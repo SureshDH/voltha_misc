@@ -4,7 +4,7 @@
 	./parent <any name appended to each of the logs>
 Usage
  
-components=(voltha onos openolt openonu ofagent bbsim consul etcd)
+components=(voltha onos openolt openonu ofagent bbsim consul etcd kafka dsm)
 for component in "${components[@]}" 
 do 
 	echo $component

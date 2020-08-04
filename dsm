@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dsm=`docker ps  | grep dsm | awk '{print $1}'`
+
+case "$1" in
+	"log")	docker logs $dsm &> dsm$2.log
+	;;
+	"flog")	docker logs -f $dsm
+	;;
+	"exec")	docker exec -it $dsm sh
+	;;
+	*) echo "Invalid option for component dsm:$dsm, log/flog/exec"
+	;;
+esac
